@@ -47,7 +47,7 @@ public class ExternalInventoryHandlerTest {
         ExternalInventoryHandler instance = new ExternalInventoryHandler();
         String expectedName = "Butter       ";
         ItemDTO result = instance.getItem(itemID);
-        assertEquals(expectedName, result.getName(),"Name matches the expected result.");
+        assertEquals(expectedName, result.getName(),"Name doesn't match the expected result.");
     }    
 
     /**
@@ -60,7 +60,7 @@ public class ExternalInventoryHandlerTest {
         ExternalInventoryHandler instance = new ExternalInventoryHandler();
         String expectedDescription = "Po-tay-toes! Boil 'em, mash 'em, stick 'em in a *stew*";
         ItemDTO result = instance.getItem(itemID);
-        assertEquals(expectedDescription, result.getDescription(),"Description matches expected result.");
+        assertEquals(expectedDescription, result.getDescription(),"Description doesn't match expected result.");
     }
 
     /**
@@ -73,7 +73,7 @@ public class ExternalInventoryHandlerTest {
         ExternalInventoryHandler instance = new ExternalInventoryHandler();
         double expectedPrice = 30d;
         ItemDTO result = instance.getItem(itemID);
-        assertEquals(expectedPrice, result.getPrice(), "price matches expected result.");
+        assertEquals(expectedPrice, result.getPrice(), "price doesn't match expected result.");
     }
 
     /**
@@ -86,7 +86,7 @@ public class ExternalInventoryHandlerTest {
         ExternalInventoryHandler instance = new ExternalInventoryHandler();
         double expectedRateVAT = 0.12d;
         ItemDTO result = instance.getItem(itemID);
-        assertEquals(expectedRateVAT, result.getVAT(), "VAT matches expected result.");
+        assertEquals(expectedRateVAT, result.getVAT(), "VAT doesn't match expected result.");
     }
 
     /**
@@ -100,7 +100,7 @@ public class ExternalInventoryHandlerTest {
         ExternalInventoryHandler instance = new ExternalInventoryHandler();
         String expectedDescription = "Po-tay-toes! Boil 'em, mash 'em, stick 'em in a *stew*";
         ItemDTO result = instance.getItem(itemID);
-        assertFalse(expectedDescription.equals(result.getDescription()),"Description matches expected result.");
+        assertFalse(expectedDescription.equals(result.getDescription()),"Result matches the description of the wrong item.");
     }
     
 }

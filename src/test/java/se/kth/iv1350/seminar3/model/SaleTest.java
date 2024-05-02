@@ -39,7 +39,7 @@ public class SaleTest {
         Sale instance = new Sale();
         SaleDTO unexpectedResult = instance.createSaleDTO();
         SaleDTO result = instance.updateSale();
-        assertFalse(unexpectedResult == result,"The time has or date has changed");
+        assertFalse(unexpectedResult == result,"Neither the time nor the date has changed");
     }
 
     /**
@@ -55,7 +55,7 @@ public class SaleTest {
         Sale instance = new Sale();
         SaleDTO unexpectedResult = instance.createSaleDTO();
         SaleDTO result = instance.addItemToSale(item);
-        assertFalse(unexpectedResult == result, "The sale DTO is different between when"
+        assertFalse(unexpectedResult == result, "The sale DTO isn't different between when"
                 + " it was called at the end of addItemToSale to when it was "
                 + "called before addItemToSale");
     }
