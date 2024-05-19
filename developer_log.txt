@@ -1,25 +1,25 @@
-18 May 2024, 14:07:20, Exception was thrown: Database could not be reached!
+19 May 2024, 13:15:36, Exception was thrown: Database could not be reached!
 se.kth.iv1350.seminar4.integration.DatabaseNotFoundException: Database could not be reached!
 	at se.kth.iv1350.seminar4.integration.ExternalInventoryHandler.getItem(ExternalInventoryHandler.java:47)
 	at se.kth.iv1350.seminar4.controller.Controller.scanItem(Controller.java:78)
 	at se.kth.iv1350.seminar4.view.View.scanAndPresentItem(View.java:72)
 	at se.kth.iv1350.seminar4.view.View.saleProcess(View.java:41)
 	at se.kth.iv1350.seminar4.startup.Main.main(Main.java:29)
-18 May 2024, 14:07:20, Exception was thrown: Database could not be reached!
+19 May 2024, 13:15:36, Exception was thrown: Database could not be reached!
 se.kth.iv1350.seminar4.integration.DatabaseNotFoundException: Database could not be reached!
 	at se.kth.iv1350.seminar4.integration.ExternalInventoryHandler.getItem(ExternalInventoryHandler.java:47)
 	at se.kth.iv1350.seminar4.controller.Controller.scanItem(Controller.java:78)
 	at se.kth.iv1350.seminar4.view.View.scanAndPresentItem(View.java:72)
 	at se.kth.iv1350.seminar4.view.View.saleProcess(View.java:45)
 	at se.kth.iv1350.seminar4.startup.Main.main(Main.java:29)
-18 May 2024, 14:07:20, Exception was thrown: Database could not be reached!
+19 May 2024, 13:15:36, Exception was thrown: Database could not be reached!
 se.kth.iv1350.seminar4.integration.DatabaseNotFoundException: Database could not be reached!
 	at se.kth.iv1350.seminar4.integration.ExternalInventoryHandler.getItem(ExternalInventoryHandler.java:47)
 	at se.kth.iv1350.seminar4.controller.Controller.scanItem(Controller.java:78)
 	at se.kth.iv1350.seminar4.view.View.scanAndPresentItem(View.java:72)
 	at se.kth.iv1350.seminar4.view.View.saleProcess(View.java:41)
 	at se.kth.iv1350.seminar4.startup.Main.main(Main.java:30)
-18 May 2024, 14:07:20, Exception was thrown: Database could not be reached!
+19 May 2024, 13:15:36, Exception was thrown: Database could not be reached!
 se.kth.iv1350.seminar4.integration.DatabaseNotFoundException: Database could not be reached!
 	at se.kth.iv1350.seminar4.integration.ExternalInventoryHandler.getItem(ExternalInventoryHandler.java:47)
 	at se.kth.iv1350.seminar4.controller.Controller.scanItem(Controller.java:78)

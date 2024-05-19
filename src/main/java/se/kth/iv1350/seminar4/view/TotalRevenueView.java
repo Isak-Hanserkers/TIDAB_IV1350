@@ -1,6 +1,7 @@
 package se.kth.iv1350.seminar4.view;
 
 import se.kth.iv1350.seminar4.model.RevenueObserver;
+import se.kth.iv1350.seminar4.model.SaleDTO;
 
 /**
  * This is the implementation of the ObserverInterface that shows the total
@@ -20,8 +21,8 @@ class TotalRevenueView implements RevenueObserver {
      * after each sale and which sale it was to system.out.
      */
     @Override
-    public void totalRevenue(double totalPrice) {
-        totalRevenue += totalPrice;
+    public void totalRevenue(SaleDTO saleDTO) {
+        totalRevenue += saleDTO.getTotalPrice();
         System.out.println("");
         System.out.println("Total revenue after sale number " + saleNumber + ": " + totalRevenue + "SEK");
         saleNumber++;

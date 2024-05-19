@@ -123,7 +123,7 @@ public class Controller {
 
     private void notifyObservers() {
         for (RevenueObserver observer : revenueObservers) {
-            observer.totalRevenue(this.saleDTO.getTotalPrice());
+            observer.totalRevenue(this.saleDTO);
         }
     }
 

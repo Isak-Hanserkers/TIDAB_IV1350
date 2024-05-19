@@ -4,6 +4,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import se.kth.iv1350.seminar4.model.RevenueObserver;
+import se.kth.iv1350.seminar4.model.SaleDTO;
 
 /**
  * This is the implementation of the ObserverInterface that writes the total
@@ -32,8 +33,8 @@ public class TotalRevenueFileOutput implements RevenueObserver {
      * after each sale and which sale it was to the file Revenue_File.txt.
      */
     @Override
-    public void totalRevenue(double totalPrice) {
-        totalRevenue += totalPrice;
+    public void totalRevenue(SaleDTO saleDTO) {
+        totalRevenue += saleDTO.getTotalPrice();
         revenueFile.println("Total revenue after sale number " + saleNumber + ": " + totalRevenue + "SEK");
         saleNumber++;
     }

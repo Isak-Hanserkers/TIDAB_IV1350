@@ -10,7 +10,7 @@ public interface RevenueObserver {
      * A placeholder method meant to be overwritten by the methods in
      * TotalRevenueView and RevenueToFile.
      *
-     * @param totalPrice is the price of each individual sale.
+     * @param saleDTO is the DTO object for the sale.
      */
-    public void totalRevenue(double totalPrice);
+    public void totalRevenue(SaleDTO saleDTO);
 }
