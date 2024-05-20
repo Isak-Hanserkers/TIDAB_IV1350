@@ -3,6 +3,8 @@ package se.kth.iv1350.seminar4.model;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.ArrayList;
+import java.util.List;
+import se.kth.iv1350.seminar4.model.RevenueObserver;
 
 /**
  *
@@ -16,6 +18,8 @@ public class Sale {
     private LocalDate dateOfSale;
     private ArrayList<Item> items;
     private SaleDTO saleDTO;
+
+    private List<RevenueObserver> revenueObservers = new ArrayList<>();
 
     /**
      * This is the constructor for the class used for the sale object.
@@ -92,5 +96,24 @@ public class Sale {
     SaleDTO createSaleDTO() {
         saleDTO = new SaleDTO(items, totalPrice, totalPriceWithVAT, timeOfSale, dateOfSale);
         return saleDTO;
+    }
+   
+
+    /**
+     * This is a method that adds observers from a list of observers to the sale object.
+     */    
+    public void addObservers(List<RevenueObserver> observers) {
+    for (RevenueObserver revenueObserver : observers) {
+            revenueObservers.add(revenueObserver);
+        }
+}
+    
+    /**
+     * This is a method used to notify the observers for the sale.
+     */    
+    public void notifyObservers() {
+        for (RevenueObserver observer : revenueObservers) {
+            observer.totalRevenue(totalPrice);
+        }
     }
 }

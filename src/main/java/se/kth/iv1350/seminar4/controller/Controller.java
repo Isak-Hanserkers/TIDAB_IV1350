@@ -57,6 +57,7 @@ public class Controller {
      */
     public void startSale() {
         this.sale = new Sale();
+        this.sale.addObservers(revenueObservers);
     }
 
     /**
@@ -109,7 +110,7 @@ public class Controller {
         receipt = new Receipt(amount, saleDTO);
         cashRegister.increaseAmountInRegister(receipt, amount);
         printerHandler.printReceipt(receipt);
-        notifyObservers();
+        sale.notifyObservers();
     }
 
     private void updateExternalSystems(SaleDTO saleDTO) {
@@ -117,14 +118,14 @@ public class Controller {
         externalAccountingHandler.updateAccountingSystem(saleDTO);
     }
 
+    /**
+     * Method for adding observers to the sale
+     * 
+     * @param observer is the a observer class object using the RevenueObserver
+     * interface.
+     */    
     public void addObservers(RevenueObserver observer) {
         revenueObservers.add(observer);
-    }
-
-    private void notifyObservers() {
-        for (RevenueObserver observer : revenueObservers) {
-            observer.totalRevenue(this.saleDTO);
-        }
     }
 
 }
